@@ -1,0 +1,270 @@
+:root {
+  --underlay-color: #E3C73B;
+  --text-color: #56548F;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+header {
+  background-color: #56548F;
+}
+
+header h1 {
+  font-size: 32px;
+  display: inline-block;
+  color: var(--text-color);
+  background-color: var(--underlay-color);
+  padding: 0 16px 0 4%;
+  margin: 16px 0 16px 0;
+}
+
+nav {
+  margin-right: 4%;
+  float: right;
+  font-size: 18px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: inline-block;
+  margin-left: 25px;
+}
+
+nav a {
+  color: #E3C73B;
+  padding-bottom: 4px;
+  border-bottom: 4px solid #E3C73B;
+}
+
+a {
+  color: #56548F;
+  text-decoration: none;
+}
+
+.hero-banner {
+  background-image: url("../images/online-web-design.jpg");
+  background-size: cover;
+  background-position: top;
+  height: 280px;
+  width: 100%;
+  position: relative;
+}
+
+.hero-banner:after {
+  position: absolute;
+  content:"";
+  height:100%;
+  width:100%;
+  top:0;
+  left:0;
+  background: linear-gradient(to bottom, rgba(86,84,143,0) 0%,rgba(86,84,143,0.65) 100%);
+}
+
+.hero-banner h2 {
+  font-size: 24px;
+  padding: 0 16px 0 16px;
+  display: flex;
+  position: absolute;
+  bottom: 16px;
+  right: 4%;
+  color: var(--text-color);
+  background-color: var(--underlay-color);
+  z-index: 2;
+}
+
+.page-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  gap: 4%;
+  width: 92%;
+  margin: 32px auto 12% auto;
+}
+
+.portfolio-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr 1fr 1fr;
+  grid-template-areas:
+    "main-project main-project"
+    "secondary-project-1 secondary-project-2"
+    "secondary-project-3 secondary-project-4";
+  gap: 16px;
+}
+
+#main-project {
+  grid-area: main-project;
+}
+#secondary-project-1 {
+  grid-area: secondary-project-1;
+}
+#secondary-project-2 {
+  grid-area: secondary-project-2;
+}
+#secondary-project-3 {
+  grid-area: secondary-project-3;
+}
+#secondary-project-4 {
+  grid-area: secondary-project-4;
+}
+
+.portfolio-container-area {
+  width: 100%;
+  position: relative;
+}
+
+.portfolio-container-area a img {
+  object-fit: cover;
+  width: 100%;
+	opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.portfolio-container-area a img:hover {
+	opacity: .5;
+}
+
+.heading {
+  background-color: rgba(86,84,143,1);
+  color: #fff;
+  position: absolute;
+  top: 16px;
+  width: fit-content;
+  height: fit-content;
+  padding: 0 16px 0 16px;
+  font-size: 18px;
+}
+
+.page-section {
+  border-right: 4px solid var(--text-color);
+  text-align: right;
+  padding-right: 16px;
+}
+
+.page-section h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.profile-pic {
+  margin-right: 4%;
+  border: 4px solid var(--text-color);
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.about-me {
+  display: flex;
+  align-items: flex-start;
+}
+
+@media screen and (max-width: 900px) {
+
+  .page-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 92%;
+    gap: 32px;
+    margin: 32px auto 32px auto;
+  }
+
+  .portfolio-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px 200px 200px 200px 200px;
+    grid-template-areas:
+      "main-project"
+      "secondary-project-1"
+      "secondary-project-2"
+      "secondary-project-3"
+      "secondary-project-4";
+  }
+
+  .page-section {
+    border: 0px;
+    text-align: center;
+    padding-top: 32px;
+    padding-right: 0px;
+  }
+
+  .portfolio-container-area a img {
+    height: 200px;
+  }
+
+  section ul {
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+  }
+
+  section li {
+    display: block;
+    margin: 0px;
+  }
+  
+}
+
+@media screen and (max-width: 610px) {
+
+  header {
+    display: flex;
+  }
+
+  header h1 {
+    display: none;
+  }
+
+  nav li {
+    display: inline-block;
+    margin: 8px;
+  }
+
+  nav ul {
+    padding: 0px;
+    margin: 12px;
+  }
+
+  nav {
+    margin-right: 0px;
+  }
+
+  .about-me {
+    display: block;
+  }
+
+  .about-me img {
+    width: 200px;
+    margin: 0 auto 16px auto;
+  }
+
+}
