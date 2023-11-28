@@ -27,6 +27,8 @@ p {
   margin: 0;
 }
 
+ /* Logo and nav bar area */ 
+
 header {
   background-color: #56548F;
 }
@@ -61,10 +63,7 @@ nav a {
   border-bottom: 4px solid #E3C73B;
 }
 
-a {
-  color: #56548F;
-  text-decoration: none;
-}
+ /* Hero banner area */
 
 .hero-banner {
   background-image: url("../images/online-web-design.jpg");
@@ -97,6 +96,8 @@ a {
   z-index: 2;
 }
 
+ /* Main two column grid for the content area */ 
+
 .page-wrapper {
   display: grid;
   grid-template-columns: 1fr 6fr;
@@ -104,6 +105,8 @@ a {
   width: 92%;
   margin: 32px auto 12% auto;
 }
+
+ /* Portfolio area grid inside the main grid */ 
 
 .portfolio-container {
   width: 100%;
@@ -161,6 +164,8 @@ a {
   font-size: 18px;
 }
 
+ /* Content area */ 
+
 .page-section {
   border-right: 4px solid var(--text-color);
   text-align: right;
@@ -171,6 +176,11 @@ a {
   font-size: 24px;
   font-weight: bold;
   color: var(--text-color);
+}
+
+a {
+  color: #56548F;
+  text-decoration: none;
 }
 
 .profile-pic {
@@ -186,6 +196,8 @@ a {
   display: flex;
   align-items: flex-start;
 }
+
+/* Media query section */ 
 
 @media screen and (max-width: 900px) {
 
